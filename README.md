@@ -1,4 +1,4 @@
 # fullstack-11
 fullstack course
 
-este es un repositorio de prueba
+este es un repositorio del curso fullstack11
