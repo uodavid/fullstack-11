@@ -2,7 +2,42 @@
         p{
             font-style: italic;
         }
+
+        h1{
+font-family: Helvetica, sans-serif, Arial;
+text-align: center;
+        }
+
+        h2{
+            color: #db2424;
+            background-color: bisque;
+        }
+
+        tr{
+            background-color: antiquewhite;
+        }
+
+        td{
+           /* background-color: rgb(133, 114, 91);
+           */ /*estoy comentando la propiedad de fondo para que se omita este color
+           y se vea el color amarillo*/
+        }
+
+        img{
+            float: center; /*pone a flotar un elemento hacia un lado y no queda sobre el texto 
+            y los demas elementos se corren hacia*/
+        }
+
+        #news{
+            background-color: rgb(90, 65, 65);
+
+        }
+
+        #colombia{
+            background-color: yellow;
+        }
+
         .news-content{
-            background-color: blue;
+            background-color: rgb(179, 179, 211);
         }
 
