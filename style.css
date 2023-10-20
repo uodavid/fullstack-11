@@ -4,8 +4,20 @@
         }
 
         h1{
-font-family: Helvetica, sans-serif, Arial;
-text-align: center;
+            font-family: Helvetica, sans-serif, Arial;
+            text-align: center;
+            border:   1px ;
+            background-color: aquamarine;
+            padding: 10px; /*relleno entre el contenido y el borde*/
+            margin: top 10px;
+            margin-bottom: 20px;
+             /*para que le salga borde al titulo*/
+            /*si se le quiere poner un borde diferente a cada lado se pone 
+            background-color: aquamarine;
+            border-top: 2px;
+            border-right: 2px;
+            border-bottom: 2px;
+            border-left: 2px; red;  como se necesite*/
         }
 
         h2{
@@ -36,6 +48,10 @@ text-align: center;
         #colombia{
             background-color: yellow;
         }
+
+#main-photo{
+    border: 2px #db2424;
+}
 
         .news-content{
             background-color: rgb(179, 179, 211);
