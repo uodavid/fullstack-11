@@ -12,17 +12,21 @@
     <header>
         <h1>Selección Colombia</h1>
 
-        <a href="index.html">Inicio</a>
-        <a href="goles.html">Goles</a>
-        <a href="tabla.html">Tabla de Posiciones</a>
-        <a href="contacto.html">Contacto</a>
-        <a href="https://fcf.com.co/" target="_blank">Sitio Web Oficial FCF</a>
+        <div id="menu">
+            <a href="index.html">Inicio</a>
+            <a href="goles.html">Goles</a>
+            <a href="tabla.html">Tabla de Posiciones</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="https://fcf.com.co/" target="_blank">Sitio Web Oficial FCF</a>
+        </div>
+        
         
     </header>
     <main>
         <h2>Te damos la bienvenida</h2>
         <img id="main-photo" src="img/Selección-Colombia-1-1.jpg" alt="Futbolistas de la Selección" width="50%" height="auto">
         <p>Te damos la bienvenida al sitio no oficial de la selección Colombia</p>
+        <img src="https://image.lexica.art/full_jpg/88b57d0b-ba26-46be-976b-4487d2113b89" alt="colombia" width="30%">
         <!--a esta imagen le aplicamos un id (id="main-photo") para poderla manipular-->
         
         <h2>Ultimas Noticias</h2>
@@ -61,12 +65,13 @@
         </ul>
         <h3>Partidos</h3>
         <ol>
-            <li>Colombia vs Venezuela</li>
-            <li>Colombia vs Chile</li>
-            <li>Colombia vs Uruguay</li>
-            <li>Colombia vs Ecuador</li>
-            <li>Colombia vs Brasil</li>
-            
+            <li class="odd">Colombia vs Venezuela</li> 
+            <li class="even">Colombia vs Chile</li>
+            <li class="odd">Colombia vs Uruguay</li>
+            <li class="odd">Colombia vs Ecuador</li>
+            <li class="even">Colombia vs Brasil</li>
+            <!--se agrega una clase odd y even (par e impar en ingles)
+                 para que los partidos queden intercalados y leerlos sea mas facil-->
         </ol>
         <h3>Tabla de posiciones</h3>
         <a href="tabla.html">ver tabla</a>

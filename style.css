@@ -1,7 +1,23 @@
 
-        p{
+       
+       * {
+        margin: 0%;
+        padding: 0%;
+
+        /*selector universal es para que no use los bordes que el navegador le da 
+        sino que uno mismo los haga */
+       }    
+       
+       p{
             font-style: italic;
         }
+
+a{
+    margin: 5px;
+    background-color: antiquewhite;
+    border-radius: 100px; /*sirve para redondear los bordes*/
+    padding: 5px;
+}
 
         h1{
             font-family: Helvetica, sans-serif, Arial;
@@ -18,11 +34,16 @@
             border-right: 2px;
             border-bottom: 2px;
             border-left: 2px; red;  como se necesite*/
+            /*para escoger un color de alguna pagina vamos a la pagina click derecho inspeccionar
+            buscamos el color en un textonos paramos en el elemnto y buscamos las propiedades
+            y copiamos el color y cuando esta en una imagen en element style coloca background 
+            color y pongo red y en el goterero me paro sobre algo y ya me da el color */
         }
 
         h2{
             color: #db2424;
             background-color: bisque;
+            margin-top: 15px;
         }
 
         tr{
@@ -55,5 +76,13 @@
 
         .news-content{
             background-color: rgb(179, 179, 211);
+        }
+
+        .odd {
+           background-color: bisque; 
+        }
+
+        .even {
+            background-color: aliceblue;
         }
 
