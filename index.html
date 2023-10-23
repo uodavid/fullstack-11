@@ -7,17 +7,24 @@
     <link rel="icon" href="img/favicon.png" type="image/x-icon">
     <title>Inicio - Pagina de la Slección Colombia</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <!--para linkear la letra desde google fonts-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
     <header>
         <h1>Selección Colombia</h1>
 
         <div id="menu">
-            <a href="index.html">Inicio</a>
-            <a href="goles.html">Goles</a>
-            <a href="tabla.html">Tabla de Posiciones</a>
-            <a href="contacto.html">Contacto</a>
-            <a href="https://fcf.com.co/" target="_blank">Sitio Web Oficial FCF</a>
+            <a href="index.html" class="btn btn-secondary">Inicio</a> <!--btn es para que salgan los botones en boostrap-->
+            <a href="goles.html" class="btn btn-secondary">Goles</a>
+            <a href="tabla.html" class="btn btn-secondary">Tabla de Posiciones</a>
+            <a href="contacto.html" class="btn btn-secondary">Contacto</a>
+            <a href="https://fcf.com.co/" class="btn btn-outline-warning" target="_blank">Sitio Web Oficial FCF</a>
+            <!--ingreso a boostrap y cambio btn btn-info el info lo cambio por lo que quiero ejemplo
+            "btn btn-warning"-->
         </div>
         
         
@@ -26,15 +33,20 @@
         <h2>Te damos la bienvenida</h2>
         <img id="main-photo" src="img/Selección-Colombia-1-1.jpg" alt="Futbolistas de la Selección" width="50%" height="auto">
         <p>Te damos la bienvenida al sitio no oficial de la selección Colombia</p>
-        <img src="https://image.lexica.art/full_jpg/88b57d0b-ba26-46be-976b-4487d2113b89" alt="colombia" width="30%">
-        <!--a esta imagen le aplicamos un id (id="main-photo") para poderla manipular-->
+        
+        <div id="id-photo"> <!--metemos la imagen de inteligencia artificial a un div y le ponemos
+        un id -->
+            <img src="https://image.lexica.art/full_jpg/88b57d0b-ba26-46be-976b-4487d2113b89" alt="colombia" width="30%">
+            <!--a esta imagen le aplicamos un id (id="main-photo") para poderla manipular-->
+            
+        </div>
         
         <h2>Ultimas Noticias</h2>
         
 
         
 <div id="news">
-    <div id="news-1" class="news">
+    <div id="news-1" class="news" >
         <h3>Colombia empato con Uruguay</h3>
         <p>Publicado hace 6 días</p>
         <p class="news-content">El juego Ecuador vs. Colombia dará inicio a las 6:30 p.m. (hora colombiana) 
@@ -42,7 +54,7 @@
             <div> Recibe un 10% en el descuento de tu camisa si te inscribes</div>
     </div>
     
-    <div id="news-2" class="news">
+    <div id="news-2" class="news" >
         <h3>Colombia empato con Ecuador </h3>
         <p>Publicado hace 21 horas</p>
 
@@ -51,6 +63,16 @@
         <div> Recibe un 10% en el descuento de tu camisa si te inscribes</div>
         
     </div>   
+    <div id="news-3" class="news" >
+        <h3>Colombia sigue invicto </h3>
+        <p>Publicado hace 21 horas</p>
+
+        <p class="news-content">Colombia sigue invicto pero es 5 to en la 
+            posocion general</p>
+        
+        <div>Crees que pasaremos al mundial</div>
+        
+    </div>  
 </div>
         
 
