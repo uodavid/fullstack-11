@@ -94,3 +94,22 @@ a{
             background-color: aliceblue;
         }
 
+@media only screen and (max-width: 600px) {
+
+    header {
+        padding: 10px;
+    }
+
+    #main-photo{
+    max-width: 100%;
+}
+
+    #ai-photo{
+        display: none;
+    }
+
+    .news {
+        border: 1px solid;
+        margin: 10px;
+    }
+}
