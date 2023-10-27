@@ -75,6 +75,9 @@ let persona = {
     semanasCotizadas: 100,
 }   
 
+
+//aqui hay bastante codigo q esta dentro de una funcion undir mause >
+function ejemplosCondiciones(){
 //condicionales - que tome un camino u otro
 //vamos a ver si la persona puede entrar a un bar
 
@@ -151,7 +154,11 @@ persona.semanasCotizadas >= 1300 && persona.edad >=edadPensionMasculina && perso
 
 persona.cedula || persona.pasaporte ? console.log("Puede Salir del Pais") : console.log("No Puede Salir del Pais");
 
-//ciclos - estructura de control que me permite escribir menos codigo para hacer tarea que es repetitiva
+}
+
+//aqui hay bastante codigo q esta dentro de una funcion undir mause >
+function ejemplosCiclos(){
+    //ciclos - estructura de control que me permite escribir menos codigo para hacer tarea que es repetitiva
 
 //Ciclo FOR - sirve para recorrer y mostrar algo 
 
@@ -202,6 +209,22 @@ do{
 
 }while(opcion !=4);
 
+}
+
+
+//FUNCIONES cuando queremos ejecutar un bloque de codigo mas de una vez
+
+function saludar(){
+    console.log("Hola te doy la bienvenida a mi programa");
+    if(persona.edad >=18){
+        console.log("Puedes Jugar");
+  }
+}
+
+saludar(); //las funciones se pueden llamar varias veces pongo saludar de ultimo y me vuelve a salir
+ejemplosCondiciones();
+ejemplosCiclos();
+saludar(); 
 
 
 
