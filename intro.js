@@ -164,12 +164,44 @@ console.log("5 elefantes se balanceaban"); */
 
 
 //forma correcta
-for(let contador = 1; contador <=10; contador ++){
-    if(contador == 1){
-        console.log("un elefante se balanceaba");
-    }else{
-        console.log(contador + " elefantes se balanceaban");
+console.log("un elefante se balanceaba");
+for(let contador = 2; contador <=5; contador ++){
+    console.log(contador + " elefantes se balanceaban");
 
     }
     
+//for para recorrer un array
+
+for(let i = 0; i< nombres.length; i++){
+    console.log(nombres[i]);
 }
+
+console.log(nombres[0]); //me muestra el campo 0 y el 3 juan y claudia
+console.log(nombres[3]);
+
+//ciclo while o mientras
+// ++ incrementa en 1 y +=2 incrementa de a dos
+
+while(persona.edad < 30){
+    console.log("para ser treinton te faltan" + (30 - persona.edad) + "años");
+    persona.edad++;
+}
+
+//ciclo Do while con la diferencia que garantiza la ejecucion del bloque interno al menos una vez -- sirve para los menus
+
+let opcion = 3;
+
+do{
+    console.log("Bienvenidos a Mario Kart");
+    console.log("1. Jugar");
+    console.log("2. Configuracion");
+    console.log("3. Multijugador");
+    console.log("4. Salir");
+
+    opcion++;
+
+}while(opcion !=4);
+
+
+
+
