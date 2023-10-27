@@ -150,3 +150,26 @@ persona.sexo == "F" ? console.log("Es un Hombre") : console.log("Es una Mujer");
 persona.semanasCotizadas >= 1300 && persona.edad >=edadPensionMasculina && persona.sexo == "M" ? console.log("Puede Pensionarse") : console.log("No Puede Pensionarse");
 
 persona.cedula || persona.pasaporte ? console.log("Puede Salir del Pais") : console.log("No Puede Salir del Pais");
+
+//ciclos - estructura de control que me permite escribir menos codigo para hacer tarea que es repetitiva
+
+//Ciclo FOR - sirve para recorrer y mostrar algo 
+
+/* forma no muy buena visualmente
+console.log("un elefante se balanceaba");
+console.log("2 elefantes se balanceaban");
+console.log("3 elefantes se balanceaban");
+console.log("4 elefantes se balanceaban");
+console.log("5 elefantes se balanceaban"); */
+
+
+//forma correcta
+for(let contador = 1; contador <=10; contador ++){
+    if(contador == 1){
+        console.log("un elefante se balanceaba");
+    }else{
+        console.log(contador + " elefantes se balanceaban");
+
+    }
+    
+}
