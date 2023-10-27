@@ -58,8 +58,10 @@ let datos = ["Juan", 25, true, null];
 
 let persona = {
     nombre: "Juan",
-    edad: 25,
+    edad: 12,
+    sexo: "M",
     esMayorDeEdad: true,
+    cedula: 1061707215,
     puntajeDatacredito: null,
     reporteSisben: undefined,
     coloresFavoritos: ["rojo", "verde", "azul"],
@@ -70,6 +72,7 @@ let persona = {
     },
     fechaExpedicion: "2006-05-04",
     fechaVencimiento: new Date("2025-05-04"),
+    semanasCotizadas: 100,
 }   
 
 //condicionales - que tome un camino u otro
@@ -81,5 +84,69 @@ let edadPersona = persona.edad;
 
 if (edadPersona >= mayoriaEdad){
     console.log("Puede entrar al bar");
+}else {
+    console.log("No puede entrar al bar");
 }
 
+// if con doble condicional - varias condiciones dentro de un condicional
+
+const edadPensionMasculina = 62;
+const edadPensionFemenina = 57;
+
+if(persona.edad >= edadPensionMasculina && persona.sexo == "M" && persona.semanasCotizadas >= 1300){
+    console.info("Puede Pensionarse");
+}else if(persona.edad >= edadPensionFemenina && persona.sexo == "M" && persona.semanasCotizadas >= 1300){
+        console.info("Puede Pensionarse");
+}else {
+    console.error("No Puede Pensionarse"); 
+}
+
+//condicional con el operador OR se pone con dos pipes para q la operacion se ejecute si una de las dos es verdadera
+//vamos a ver si la persona puede salir del pais o tiene pasaporte o tiene cedula
+
+if(persona.cedula || persona.pasaporte){
+    console.log("Puede Salir del Pais");
+}else{
+    console.log("No Puede Salir del Pais");
+}
+
+
+//condicional Switch case - cuando se quiere evaluar una expresion dentro de una serie de condiciones
+
+let dia = "viernes";
+
+switch(dia){
+    case "lunes":
+        console.log("Hoy es Lunes");
+        break; 
+    case "martes":
+        console.log("Hoy es martes");
+        break;
+    case "miercoles":
+        console.log("Hoy es miercoles");
+        break;
+    case "jueves":
+        console.log("Hoy es jueves");
+        break;
+    case "viernes":
+        console.log("Porfin es Viernes")
+        console.log("Hoy es viernes");
+        break;
+    case "sabado":
+        console.log("Hoy es sabado");
+        break;
+    case "domingo":
+        console.log("Hoy es domingo");
+        break;
+    default: 
+        console.log("No es un día valido")
+        break;
+}
+
+//operador ternario - es similar al if else solo que usa el signo de interrogacion y dos puntos cuando la operacion es verdadera y cuando es falsa
+
+persona.sexo == "F" ? console.log("Es un Hombre") : console.log("Es una Mujer");
+
+persona.semanasCotizadas >= 1300 && persona.edad >=edadPensionMasculina && persona.sexo == "M" ? console.log("Puede Pensionarse") : console.log("No Puede Pensionarse");
+
+persona.cedula || persona.pasaporte ? console.log("Puede Salir del Pais") : console.log("No Puede Salir del Pais");
