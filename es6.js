@@ -16,8 +16,16 @@ function inicio(){ //una funcion mas grande llamada inicio
     let edadPersona = prompt("ingresa tu edad");
     let resultadoCalculo = calcularNacimiento(edadPersona);
     
-    
-    console.log(resultadoSaludo + "tu año de naciemineto es " + resultadoCalculo);
+    //let result = resultadoSaludo + " tu año de nacimiento es " + resultadoCalculo;// hace lo mismo ue el de abajo pero se ve mas bonito
+
+    //esto e sun template literal o string
+
+    let result = `${resultadoSaludo} tu año de nacimiento es 
+    ${resultadoCalculo}`; 
+
+    console.log(result);
 }
 
 inicio();
+
+
