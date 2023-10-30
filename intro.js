@@ -213,18 +213,20 @@ do{
 
 
 //FUNCIONES cuando queremos ejecutar un bloque de codigo mas de una vez
+//las funciones pueden tener varios parametros 
+//function saludar(persona ,edad){
 
-function saludar(){
-    console.log("Hola te doy la bienvenida a mi programa");
+function saludar(persona, edad= 19){ //a esta funcion voy a pasarle parametros se le pone a saludar(nombre) y se concatena en el console log
+    console.log("Hola, " + persona + " te doy la bienvenida a mi programa");
     if(persona.edad >=18){
         console.log("Puedes Jugar");
   }
 }
 
-saludar(); //las funciones se pueden llamar varias veces pongo saludar de ultimo y me vuelve a salir
-ejemplosCondiciones();
-ejemplosCiclos();
-saludar(); 
+saludar("juan", 15); //las funciones se pueden llamar varias veces pongo saludar de ultimo y me vuelve a salir
+//ejemplosCondiciones();
+//ejemplosCiclos();
+saludar(persona.nombre); 
 
 
 
