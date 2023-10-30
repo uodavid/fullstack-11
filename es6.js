@@ -1,5 +1,7 @@
 //retornos en una funcion
 
+let month = "october";
+let passPort = "1061707215";
 
 function inicio(){ //una funcion mas grande llamada inicio 
 
@@ -34,12 +36,16 @@ function inicio(){ //una funcion mas grande llamada inicio
 //IIFE expresiones de funcion inmediatamente invocadas
 //cuando tenemos una funcion q se llame una vez pero que se llame cuando cargo la pagina
 
-(function(){
-    console.log("Hola mundo");
-})()
+(function(){ 
+    let month = "november";
+    let identification = "1061707215"
+    console.log(`Hola mundo ${month} ${identification} ${passPort}`);
+})();
 
 
 //ARRAYS
+
+const arraysMethods = () => {
 
 const baloto = [18, 28, 57, 12, 56, 87, 1, 28];
 console.log(baloto);
@@ -82,6 +88,11 @@ baloto.forEach((el) => {
 
 const filteredNumbers = baloto.filter((el) => el >= 30);
 console.log(filteredNumbers);
+}
+
+arraysMethods ();
+
+console.log(identification);
 
 
 
