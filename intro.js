@@ -224,8 +224,8 @@ function saludar(persona, edad= 19){ //a esta funcion voy a pasarle parametros s
 }
 
 saludar("juan", 15); //las funciones se pueden llamar varias veces pongo saludar de ultimo y me vuelve a salir
-//ejemplosCondiciones();
-//ejemplosCiclos();
+ejemplosCondiciones();
+ejemplosCiclos();
 saludar(persona.nombre); 
 
 
