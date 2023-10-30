@@ -92,7 +92,69 @@ console.log(filteredNumbers);
 
 arraysMethods ();
 
-console.log(identification);
+//console.log(identification);
+
+
+//HOISTING significa cuando la svariables o el codigo se elevan a la parte superior cuando se va a ejecutar el codigo al ambito javascript
+
+const HOISTING = () => {
+
+    const year = 2023;
+
+    console.log(year);
+    
+    const testFunction = () => {
+        console.log("Soy una función de prueba");
+    }
+    
+    testFunction();
+    
+}
+
+HOISTING ();
+
+//callback - son una funcion que se pasa como parametro de otra funcion
+
+//primer metodo
+
+const demoCallback = () => {
+
+    const saludar = (funcion) => {
+        console.log("Hola Mundo");
+        funcion();
+    }
+
+const despedir = () => {
+    console.log("Adios");
+}
+
+saludar(despedir);
+
+const timer = (fn) => {
+    console.log("la siguiente funcion se ejecutara en 5 segundos");
+    setTimeout (fn, 5000); //es una funcion de javascript nativa que tiene dos parametros el primero es el callback y el segundo parametro es cuanto tiemo en milisegundos va pasar para que se ejecute 
+}
+
+timer(despedir);
+
+setTimeout (() => {
+    console.log("Han pasado 4 segundos");
+    console.log("Hola Mundo");
+} , 4000);
+
+}
+
+demoCallback();
+
+
+
+
+
+
+
+
+
+
 
 
 
