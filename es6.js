@@ -1,16 +1,18 @@
 //retornos en una funcion
 function inicio(){ //una funcion mas grande llamada inicio 
 
+    //funcion tradicional
     function saludar(nombre) {
         return "hola " + nombre;
     }
     
-    function calcularNacimiento(edad) {
-        return 2023 - edad;
-    }
+    //funcion flecha o arrow function
+    const saludar2 = (nombre) => `hola ${nombre}`;
+
+    const calcularNacimiento = (edad) => 2023 - edad;
     
     let nombrePersona = prompt("ingresa tu nombre");
-    let resultadoSaludo = saludar (nombrePersona);
+
     
     
     let edadPersona = prompt("ingresa tu edad");
@@ -20,8 +22,7 @@ function inicio(){ //una funcion mas grande llamada inicio
 
     //esto e sun template literal o string
 
-    let result = `${resultadoSaludo} tu año de nacimiento es 
-    ${resultadoCalculo}`; 
+    let result = `${saludar (nombrePersona)} tu año de nacimiento es ${resultadoCalculo}`; 
 
     console.log(result);
 }
