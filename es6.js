@@ -142,9 +142,65 @@ setTimeout (() => {
     console.log("Hola Mundo");
 } , 4000);
 
+
+//setinterval es una funcion que se va ejecutando asi misma asi misma hasta que uno la mate cada cierto tiempo.
+const seDespideMasQueCirco = setInterval(despedir, 2000);
+
+//detener un intervalo 
+
+const intervalo = setInterval(() => {
+    console.log("Universidad");
+}, 1000);
+
+//set timeout llama a clearinterval y mata ese intervalo
+
+setTimeout (() => {
+    clearInterval(intervalo);
+    clearInterval(seDespideMasQueCirco);
+}, 6000);
+
+//poner un reloj en la consola javascript
+
+/*const reloj = setInterval(() => {
+    let date = new Date();
+    console.log(`${date.getHours()}:${date.getMinutes()}:${date.getMilliseconds()}`);
+    
+})*/
+
 }
 
-demoCallback();
+//demoCallback();
+
+//PROMESAS
+
+const demoPromesas = () => {
+
+    let promesa = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("la promesa se resolvio a los 2 segundos");
+        }, 2000);
+    })
+
+    promesa
+    .then((Response) => console.log(Response))
+    .catch((error) => console.log(error));
+
+
+    let promesa2 = new Promise((resolve, reject) => {
+        let number = Math.floor(Math.random() * 10);
+        if(number % 2 === 0) {
+            resolve(number);
+        } else {
+            reject(number);
+        }
+    });
+
+    promesa2
+    .then((response) => console.info(`el número ${response} es par`))
+    .catch((error) => console.error(`el numero ${error} es impar`));
+}
+
+demoPromesas();
 
 
 
