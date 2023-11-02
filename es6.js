@@ -202,6 +202,36 @@ const demoPromesas = () => {
 
 demoPromesas();
 
+//MULTIPLES PROMESAS RESUELVA TODAS LAS PROMESAS
+
+const multiplesPromesas = () => {
+    
+    const getJugadores = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Traje los datos de la API de la seleccion en 2 segundos");
+        }, 2000);
+    }) 
+
+    const saveStatsDB = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("guarde las estadisticas de la Base de Datos en 3 segundos");
+        }, 3000);
+    }) 
+
+    const esportToExcel = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Exporte el archivo en excel en 4 segundos");
+        }, 4000);
+    }) 
+    
+
+    Promise.all([getJugadores, saveStatsDB, esportToExcel])
+    .then((response) => console.info(response))
+    .catch((error) => console.error(error));
+}
+
+multiplesPromesas();
+
 
 
 
