@@ -233,6 +233,40 @@ const multiplesPromesas = () => {
 multiplesPromesas();
 
 
+//promesa con sync Await - es un codigo mas corto
+const demoAsyncAwait = async () => {
+    const getEstadios = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Traje los datos de los estadios API de la seleccion en 5 segundos");
+        }, 5000);
+    })
+
+const responseAPIEstadios = await getEstadios;
+console.log(responseAPIEstadios);
+
+const saveStadiumsDB = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Guarde los estadios en la base de datos en 6 segundos");
+        }, 6000);
+    })
+
+const responseDBStadiums = await saveStadiumsDB; 
+console.log(responseDBStadiums);
+
+const exportToExcel = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("Exporte el archivo en 7 segundos");
+    }, 7000);
+    })
+
+const responseExcel = await exportToExcel; 
+console.log(responseExcel);
+    
+}
+
+demoAsyncAwait();
+
+
 
 
 
