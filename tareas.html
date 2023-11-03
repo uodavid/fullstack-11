@@ -1,0 +1,110 @@
+<!--CRUD - crear - leer - actualizar - borrar  para manipular el DOM-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas</title>
+</head>
+<body>
+
+    <h1>Mis tareas Pendientes</h1>
+<!--formulario para agregar/editar tareas-->
+    <form id="task-form">
+        <input type="text" id="task-input" placeholder="Escribe una Tarea" required>
+        <button type="submit">Agregar editar</button>
+    </form>
+    
+<div id="tasks-container">
+    <!--lista de tareas-->
+    <ul id="task-list">
+    <!--aqui se agregan las tareas-->
+    </ul>
+</div>
+
+<script>
+    //array vacio para guardar las tareas e iniciar el indice de edicion
+    let tasks = [];
+    let editingIndex = -1;
+
+    //obtenemos elementos del DOM
+
+    const taskForm = document.getElementById('task-form'); //taskform selecciono el formulario para poder capturar el evento del boton
+    const taskInput = document.getElementById('task-input');//task input es para capturar el input del teclado
+    const taskList = document.getElementById('task-list');//listado de tareas que e spara ir agregando las tareas
+    
+
+//funcion de eliminar las tareas
+    const deleteTask = (index) => {
+        tasks.splice(index, 1);
+        updateTaskList();
+    }
+//funcion editar tarea
+    const editTask = (index) => {
+        taskInput.value = tasks[index];
+        editingIndex = index;
+    }
+
+    const updateTaskList = () => {
+        taskList.innerHTML = '';
+        tasks.forEach((task, index) => {
+
+            //elemento de lista
+            const li = document.createElement('li');
+            li.textContent = task;
+            //aqui le ponemos un id al ('li') si queremos y una clase
+            li.setAttribute('id', index);
+            li.classList.add('list');
+
+            //boton editar
+            const editBtn = document.createElement('button');
+            editBtn.textContent = 'Editar';
+            editBtn.addEventListener('click', () => editTask(index))   
+
+            
+
+            //boton eliminar
+            const deleteBtn = document.createElement('button'); 
+            deleteBtn.textContent = 'Eliminar';
+            deleteBtn.addEventListener('click', () => deleteTask(index));
+
+            //agregamos los botones al li
+            li.appendChild(editBtn);
+            li.appendChild(deleteBtn);
+            taskList.appendChild(li);
+
+
+        })
+    }
+        //creamos otra funcion de actualizar las listas de tareas
+
+    //funcion para agregar tarea y editar
+
+    const addTask = (task) => {
+        if(editingIndex === -1){
+            tasks.push(task);
+        }else {
+            tasks[editingIndex] = task;
+            editingIndex = -1;
+        }
+        
+        taskInput.value = '';//para limpiar el input se escribe esto
+        updateTaskList();
+    }
+
+//conectar el formulario con la accion
+
+taskForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const newTask = taskInput.value;
+    if(newTask) {
+        addTask(newTask);
+      // console.log(tasks);
+    }
+})
+
+</script>
+
+</body>
+</html>

@@ -31,3 +31,5 @@ mainPhoto.addEventListener('mouseleave', () => {
     document.getElementById('main-photo').style.display = 'block';
 
 });
+
+
