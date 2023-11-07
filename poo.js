@@ -83,7 +83,6 @@ class cliente extends persona {
 
 
 
-
 }
 
 //aqu estoy creando un objeto de la clase persona
@@ -105,4 +104,40 @@ clienteDelMes.depositar(1000);
 console.log(clienteDelMes.getSaldo());
 clienteDelMes.retirar(600);
 console.log(clienteDelMes.getSaldo());
+
+//ejemplo 2
+//polimorfismo - modificar el comportamiento de un metodo o sobreescribirlo para q haga algo diferente 
+
+class formaGeometrica {
+    area() {
+        //metodo sin implementacion especifica
+    }
+}
+
+class circulo extends formaGeometrica {
+    constructor(radio) {
+        super();
+        this.radio = radio;
+    }
+
+    area() {
+        return Math.PI = this.radio = this.radio;
+    }
+}
+
+class rectangulo extends formaGeometrica {
+    constructor(ancho, alto) {
+        super();
+        this.ancho = ancho;
+        this.alto = alto;
+    }
+
+    area() {
+        return this.ancho * this.alto;
+    }
+}
+
+
+
+
 //hermoso2075
