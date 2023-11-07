@@ -36,6 +36,56 @@ class persona {
 }
 
 }
+
+//creo una nueva clase llamada empleado extender o heredar los atributos de la clase persona
+
+class empleado extends persona {
+    #sueldo;
+    constructor(nombre, edad, sueldo) {
+        super(nombre, edad);
+        this.#sueldo = sueldo;
+    }
+    saludar(){
+        console.log(`Hola mi nombre es ${this.getNombre()} y tengo ${this.getEdad()} años y mi sueldo es ${this.#sueldo} dolares`); 
+    }
+}
+
+
+class cliente extends persona { 
+    #numeroCuenta;
+    #saldoCuenta;
+
+    constructor(nombre, edad, numeroCuenta, saldoCuenta) {
+        super(nombre, edad);
+        this.#numeroCuenta = numeroCuenta;
+        this.#saldoCuenta = saldoCuenta;
+    }
+    //creamos metodo saludar
+    saludar(){
+        console.log(`Hola mi nombre es ${this.getNombre()} y tengo ${this.getEdad()} años y el numero de mi cuenta es ${this.#numeroCuenta} `); 
+    }
+
+    depositar(monto) {
+        this.#saldoCuenta += monto;
+    }
+
+    retirar(monto) {
+        this.#saldoCuenta -= monto;
+    }
+
+    getSaldo() {
+        return this.#saldoCuenta;
+    }
+
+    setSaldo(nuevoSaldo) {
+         this.#saldoCuenta = nuevoSaldo;
+    }
+
+
+
+
+}
+
 //aqu estoy creando un objeto de la clase persona
 const persona1 = new persona('Juan', 19);
 const persona2 = new persona('Javier', 30);
@@ -46,5 +96,13 @@ console.log(persona1.getNombre());
 persona1.setEdad (20);
 persona1.saludar();
 
+const gerente = new empleado('juan', 35, 5000);
+gerente.saludar();
 
+const clienteDelMes = new cliente('Javier', 35, 1061707215, 0);
+clienteDelMes.saludar();
+clienteDelMes.depositar(1000);
+console.log(clienteDelMes.getSaldo());
+clienteDelMes.retirar(600);
+console.log(clienteDelMes.getSaldo());
 //hermoso2075
