@@ -1,4 +1,5 @@
 import * as operaciones from './calculadora';
+import  Empleado from './empleado';
 
 class persona {
     constructor(public nombre: string, public edad: number) {}
@@ -9,6 +10,22 @@ class persona {
 
 
 }
+
+
+class EmpleadoImpl implements Empleado {
+    constructor(public nombre: string, public salario: number) {}
+    pedirAumento = (): void => {
+        console.log('Necesito un aumento jefe');
+
+    }
+
+    getAntiguedad = (): number => 10;
+
+}
+
+const empleado1 = new EmpleadoImpl('Javier', 1000);
+empleado1.pedirAumento();
+
 
 //para instanciar una persona
 
